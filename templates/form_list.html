@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form List</title>
+</head>
+<body>
+    <h1>Form List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user_form in user_forms %}
+            <tr>
+                <td>{{ user_form.name }}</td>
+                <td>{{ user_form.dob }}</td>
+                <td>{{ user_form.email }}</td>
+                <td>{{ user_form.phone_number }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

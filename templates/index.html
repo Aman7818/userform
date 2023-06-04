@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Form</title>
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Please Fill The Below Form</h1><br>
+        <div style="width: 50%; margin: 0 auto;">
+            <form action="{% url 'user_form' %}" method="post">
+                {% csrf_token %}
+                <div>
+                    <label for="name">Username:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <br>
+                <div>
+                    <label for="dob">DOB:</label>
+                    <input type="date" name="dob" id="dob" required>
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <br>
+                <div>
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="tel" name="mobile" id="mobile" pattern="[0-9]{10}" required>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
